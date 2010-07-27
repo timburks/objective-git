@@ -11,7 +11,7 @@
      (set uuid (CFUUIDCreateString nil (CFUUIDCreate nil)))
      (NSTemporaryDirectory stringByAppendingPathComponent:uuid))
      
-(macro repo_helper
+(macro-0 repo_helper
      (set testRepoPath "NuTests/test_repo")
      (set testBareRepoPath "NuTests/test_repo_bare_clone.git")
      (set headSha "25f6d2b5c50fb1624c3cf0d6ff5bfeb0772ebd68")

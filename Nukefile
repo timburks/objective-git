@@ -2,11 +2,11 @@
 ;; Nukefile for ObjectiveGit
 ;;
 ;; Commands:
-;;	nuke 		- builds TouchJSON as a framework
+;;	nuke 		- builds ObjectiveGit as a framework
 ;;	nuke test	- runs the unit tests in the NuTests directory
-;;	nuke install	- installs TouchJSON in /Library/Frameworks
+;;	nuke install	- installs ObjectiveGit in /Library/Frameworks
 ;;	nuke clean	- removes build artifacts
-;;	nuke clobber	- removes build artifacts and TouchJSON.framework
+;;	nuke clobber	- removes build artifacts and ObjectiveGit.framework
 ;;
 ;; The "nuke" build tool is installed with Nu (http://programming.nu)
 ;;
@@ -19,13 +19,13 @@
 (set @c_files     (filelist "^src/.*.c$"))
 
 ;; arch
-(set @arch '("i386" "ppc"))
+(set @arch '("x86_64" "i386"))
 
 ;; framework description
 (set @framework "ObjectiveGit")
 (set @framework_identifier   "com.yourcompany.ObjectiveGit")
 (set @framework_creator_code "????")
-(set @framework_install_path "@executbale_path/../Frameworks")
+(set @framework_install_path "@executable_path/../Frameworks")
 
 (set @public_headers (filelist "^src/GIT.*.h$"))
 (@public_headers unionSet:(filelist "^src/#{@framework}.h"))
